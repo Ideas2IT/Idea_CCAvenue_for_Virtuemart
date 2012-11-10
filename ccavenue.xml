@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="2.5" group="vmpayment" method="upgrade">
+  <name>VMPAYMENT_CCAVENUE</name>
+  <creationDate>23-AUG-2012</creationDate>
+  <author>Lokesh</author>
+  <authorEmail>lokesh.ideas2it@gmail.com</authorEmail>
+  <authorUrl>http://www.javatechblog.com</authorUrl>
+  <copyright>Copyright (C) Lokesh, Chennai, India. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+  <version>1.0</version>
+  <description><![CDATA[<h2>Virtuemart CCAVENUE Plugin<br />Author : Lokesh <br />Email : lokesh.ideas2it@gmail.com</h2>]]></description>
+  <languages folder="languages">
+  <language tag="en-GB" client="administrator">en-GB.plg_vmpayment_ccavenue.ini</language>
+  <language tag="en-GB" client="administrator">en-GB.plg_vmpayment_ccavenue.sys.ini</language>
+  </languages>
+  <files>
+    <filename plugin="ccavenue">ccavenue.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <params addpath="/administrator/components/com_virtuemart/elements">
+    <param type="spacer" default="VMPAYMENT_CCAVENUE_VM_PARAMETERS" />
+    <param type="spacer" default="" />
+    <param name="payment_logos" type="vmfiles" label="VMPAYMENT_CCAVENUE_LOGOS" description="VMPAYMENT_CCAVENUE_LOGOS_DESC" directory="/images/stories/virtuemart/payment" default="default" hide_default="1" hide_none="1" stripext="0" exclude="^_" />
+    <param type="spacer" default="" />
+    <param type="spacer" default="" />
+    <param type="spacer" default="" />
+    <param type="spacer" default="VMPAYMENT_CCAVENUE_ACCOUNT_SETTINGS" />
+    <param type="spacer" default="" />
+    <!--param name="ccavenue_testmode" type="radio" default="0" label="VMPAYMENT_CCAVENUE_TESTMODE" description="VMPAYMENT_CCAVENUE_TESTMODE_DESC">
+      <option value="0">COM_VIRTUEMART_NO</option>
+      <option value="1">COM_VIRTUEMART_YES</option>
+    </param-->
+    <param type="spacer" default="VMPAYMENT_CCAVENUE_TEST_CARDS_AND_ACCOUNT_LINK" />
+    <param type="spacer" default="" />
+    <param type="text" name="ccavenue_merchant_id" size="50" label="CCAVENUE_MERCHANT_ID" description="CCAVENUE_MERCHANT_ID_DESC" default="" />
+    <param type="spacer" default="" />
+    <!--param name="ccavenue_security_level" type="radio" default="0" label="VMPAYMENT_CCAVENUE_SECURITY_LEVEL" description="VMPAYMENT_CCAVENUE_SECURITY_LEVEL_DESC">
+      <option value="0">VMPAYMENT_CCAVENUE_SECURITY_LEVEL_OPTION_0</option>
+      <option value="1">VMPAYMENT_CCAVENUE_SECURITY_LEVEL_OPTION_1</option>
+      <option value="2">VMPAYMENT_CCAVENUE_SECURITY_LEVEL_OPTION_2</option>
+    </param-->
+    <param type="spacer" default="" />
+    <param type="text" name="ccavenue_security_token" size="50" label="CCAVENUE_SECURITY_TOKEN" description="CCAVENUE_SECURITY_TOKEN_DESC" />
+    <param type="spacer" default="" />
+    <param type="spacer" default="" />
+    <param type="spacer" default="" level="level1" />
+    <param type="spacer" default="VMPAYMENT_CCAVENUE_RESTRICTIONS" level="level1" />
+    <param type="spacer" default="" />
+    <param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_CCAVENUE_CURRENCY" description="VMPAYMENT_CCAVENUE_CURRENCY_DESC" />
+    <param name="countries" type="vmcountries" scope="com_virtuemart" default="" label="VMPAYMENT_CCAVENUE_COUNTRIES" description="VMPAYMENT_CCAVENUE_COUNTRIES_DESC" />
+    <param name="min_amount" type="text" label="VMPAYMENT_CCAVENUE_MIN_AMOUNT" description="VMPAYMENT_CCAVENUE_MIN_AMOUNT_DESC" />
+    <param name="max_amount" type="text" label="VMPAYMENT_CCAVENUE_MAX_AMOUNT" description="VMPAYMENT_CCAVENUE_MAX_AMOUNT_DESC" />
+    <param name="cost_per_transaction" type="text" label="VMPAYMENT_CCAVENUE_COST_PER_TRANSACTION" description="VMPAYMENT_CCAVENUE_COST_PER_TRANSACTION_DESC" />
+    <param name="cost_percent_total" type="text" label="VMPAYMENT_CCAVENUE_COST_PERCENT_TOTAL" description="VMPAYMENT_CCAVENUE_COST_PERCENT_TOTAL_DESC" />
+    <param name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMPAYMENT_CCAVENUE_TAX" description="VMPAYMENT_CCAVENUE_TAX_DESC" />
+    <param type="spacer" default="" level="level1" />
+    <param type="spacer" default="" level="level1" />
+    <param type="spacer" default="VMPAYMENT_CCAVENUE_PAYMENT_PAGE" level="level1" />
+    <param type="spacer" default="" level="level1" />
+    <param name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_CCAVENUE_STATUS_PENDING" description="VMPAYMENT_CCAVENUE_STATUS_PENDING_DESC" />
+    <param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_CCAVENUE_STATUS_SUCCESS" description="VMPAYMENT_CCAVENUE_STATUS_SUCCESS_DESC" />
+    <param name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_CCAVENUE_STATUS_FAILED" description="VMPAYMENT_CCAVENUE_STATUS_FAILED_DESC" />
+    <param type="spacer" default="" level="level1" />
+  </params>
+  <config />
+</extension>
